@@ -1,0 +1,18 @@
+package com.juaracoding.test.SauceDemo.drivers.strategies;
+
+import com.juaracoding.test.SauceDemo.utils.Constants;
+
+public class DriverStrategyImplementer {
+    public static DriverStrategy chooseStrategy(String strategy) {
+        switch (strategy) {
+            case Constants.CHROME:
+                return new Chrome();
+
+            case Constants.FIREFOX:
+                return new Firefox();
+
+            default:
+                return null;
+        }
+    }
+}
